@@ -37,46 +37,63 @@
         linear-gradient(90deg, rgba(168,196,165,0.05) 1px, transparent 1px);
       background-size: 80px 80px;
     }
+    .nav-translucent {
+      background: rgba(26, 26, 24, 0.65) !important;
+      border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+      backdrop-filter: blur(16px) !important;
+    }
     .nav-transparent {
       background: transparent !important;
       border-bottom-color: transparent !important;
       backdrop-filter: none !important;
     }
-    .nav-transparent .nav-link-item { color: rgba(255,255,255,0.75) !important; }
-    .nav-transparent .nav-link-item:hover { color: #fff !important; }
-    .nav-transparent .nav-logo-primary { color: #fff !important; }
-    .nav-transparent .nav-logo-sub { color: rgba(255,255,255,0.45) !important; }
-    .nav-transparent .nav-cta-btn { background: rgba(255,255,255,0.12) !important; color: #fff !important; border: 0.5px solid rgba(255,255,255,0.25); }
-    .nav-transparent .nav-cta-btn:hover { background: var(--color-accent) !important; border-color: transparent; }
-    .nav-transparent .hamburger-btn { color: #fff !important; }
+    .nav-transparent .nav-link-item, .nav-translucent .nav-link-item { color: rgba(255,255,255,0.75) !important; }
+    .nav-transparent .nav-link-item:hover, .nav-translucent .nav-link-item:hover { color: #fff !important; }
+    .nav-transparent .nav-link-active, .nav-translucent .nav-link-active { color: #fff !important; font-weight: 500 !important; }
+    .nav-transparent .nav-logo-primary, .nav-translucent .nav-logo-primary { color: #fff !important; }
+    .nav-transparent .nav-logo-sub, .nav-translucent .nav-logo-sub { color: rgba(255,255,255,0.45) !important; }
+    .nav-transparent .nav-cta-btn, .nav-translucent .nav-cta-btn { background: rgba(255,255,255,0.12) !important; color: #fff !important; border: 0.5px solid rgba(255,255,255,0.25); }
+    .nav-transparent .nav-cta-btn:hover, .nav-translucent .nav-cta-btn:hover { background: var(--color-accent) !important; border-color: transparent; }
+    .nav-transparent .hamburger-btn, .nav-translucent .hamburger-btn { color: #fff !important; }
+    .nav-link-active {
+      position: relative;
+    }
+    .nav-link-active::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 100%;
+      height: 1.5px;
+      background-color: var(--color-accent);
+    }
+    .nav-transparent .nav-link-active::after, .nav-translucent .nav-link-active::after {
+      background-color: #fff !important;
+    }
   }
 </style>
 </head>
 <body class="font-sans font-light text-ink bg-cream text-[16px] leading-[1.75] antialiased overflow-x-hidden">
 
 <!-- NAV -->
-<nav id="main-nav" class="fixed inset-x-0 top-0 z-[100] flex items-center px-6 lg:px-16 py-4 lg:py-5 bg-[#f5f3eeeb] backdrop-blur-[12px] border-b-[0.5px] border-line transition-all duration-500 nav-transparent">
+<nav id="main-nav" class="fixed inset-x-0 top-0 z-[100] flex items-center justify-between px-6 lg:px-16 py-4 lg:py-5 bg-[#f5f3eeeb] backdrop-blur-[12px] border-b-[0.5px] border-line transition-all duration-500 nav-transparent">
   
-  <a href="index.html" class="flex flex-1 items-center gap-4 no-underline cursor-pointer group">
-    <img src="assets/logo-removebg-preview.png" alt="GeoBukový logo" class="h-10 w-auto">
+  <a href="index.html" class="flex items-center gap-4 no-underline cursor-pointer group">
+    <img src="assets/logo.png" alt="GeoBukový logo" class="h-10 w-auto">
     <div class="flex flex-col gap-[1px]">
       <span class="nav-logo-primary font-serif text-[1.2rem] font-semibold tracking-[0.02em] text-ink transition-colors duration-500">GeoBukový</span>
       <span class="nav-logo-sub text-[0.68rem] font-normal tracking-[0.18em] uppercase text-ink-muted transition-colors duration-500">Geodetická kancelária</span>
     </div>
   </a>
 
-  <ul class="hidden lg:flex gap-10 list-none justify-center flex-none">
-    <li><a href="index.html" class="nav-link-item text-[0.78rem] font-normal tracking-[0.12em] uppercase text-ink-soft no-underline transition-colors duration-200 hover:text-accent">Domov</a></li>
-    <li><a href="about.html" class="nav-link-item text-[0.78rem] font-normal tracking-[0.12em] uppercase text-ink-soft no-underline transition-colors duration-200 hover:text-accent">O nás</a></li>
-    <li><a href="services.html" class="nav-link-item text-[0.78rem] font-normal tracking-[0.12em] uppercase text-ink-soft no-underline transition-colors duration-200 hover:text-accent">Služby</a></li>
-    <li><a href="contact.html" class="nav-link-item text-[0.78rem] font-normal tracking-[0.12em] uppercase text-ink-soft no-underline transition-colors duration-200 hover:text-accent">Kontakt</a></li>
+  <ul class="hidden lg:flex gap-10 list-none items-center">
+    <li><a href="index.html" class="nav-link-item nav-link-active text-[0.78rem] tracking-[0.12em] uppercase no-underline transition-colors duration-200 text-accent font-medium">Domov</a></li>
+    <li><a href="about.html" class="nav-link-item text-[0.78rem] tracking-[0.12em] uppercase no-underline transition-colors duration-200 text-ink-soft font-normal hover:text-accent">O nás</a></li>
+    <li><a href="services.html" class="nav-link-item text-[0.78rem] tracking-[0.12em] uppercase no-underline transition-colors duration-200 text-ink-soft font-normal hover:text-accent">Služby</a></li>
+    <li><a href="contact.html" class="nav-link-item text-[0.78rem] tracking-[0.12em] uppercase no-underline transition-colors duration-200 text-ink-soft font-normal hover:text-accent">Kontakt</a></li>
   </ul>
 
-  <div class="hidden lg:flex flex-1 items-center justify-end">
-    <a href="contact.html" class="nav-cta-btn inline-block text-[0.75rem] font-medium tracking-[0.1em] uppercase text-white bg-accent px-6 py-[0.6rem] no-underline transition-all duration-300 hover:bg-accent-light">Dopytovať sa</a>
-  </div>
-
-  <div class="flex lg:hidden flex-1 justify-end">
+  <div class="flex lg:hidden justify-end">
     <button id="mobile-menu-btn" class="hamburger-btn p-2 text-ink z-[110] transition-colors duration-500" aria-label="Toggle mobile menu">
       <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path id="menu-icon" stroke-linecap="square" stroke-width="1.2" d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
@@ -112,7 +129,7 @@
       <span>Geodetická kancelária <span class="mx-1 text-white/20">/</span> Slovensko</span>
     </div>
 
-    <h1 class="font-serif text-[clamp(4rem,10vw,8.5rem)] font-light leading-[0.95] text-white tracking-[-0.03em] mb-6">
+    <h1 class="font-serif text-[clamp(4rem,10vw,8.5rem)] font-semibold leading-[0.95] text-white tracking-[-0.03em] mb-6">
       Geo<span class="bg-clip-text text-transparent bg-gradient-to-br from-[#a8c4a5] via-accent-light to-accent">Bukový</span>
     </h1>
     
@@ -280,6 +297,27 @@
   </div>
 </section>
 
+<!-- CTA -->
+<section class="bg-cream relative overflow-hidden py-24 lg:py-32 px-6 lg:px-16 border-t-[0.5px] border-line">
+  <!-- Grid overlay matching the premium hero style -->
+  <div class="absolute inset-0 hero-grid-pattern opacity-10"></div>
+  
+  <div class="max-w-[1000px] mx-auto text-center relative z-10 fade-up">
+    <div class="flex items-center justify-center gap-[0.8rem] text-[0.68rem] font-medium tracking-[0.25em] uppercase text-accent mb-6 before:content-[''] before:block before:w-[28px] before:h-[0.5px] before:bg-accent after:content-[''] after:block after:w-[28px] after:h-[0.5px] after:bg-accent">Spolupráca</div>
+    
+    <h2 class="font-serif text-[clamp(2.8rem,5vw,4.5rem)] font-light leading-[1.05] tracking-[-0.01em] text-ink mb-6">Máte otázky?</h2>
+    
+    <p class="text-[0.95rem] lg:text-[1.05rem] text-ink-soft leading-relaxed mb-12 max-w-[500px] mx-auto">Neváhajte nás kontaktovať pre nezáväznú konzultáciu. Radi sa s vami porozprávame o vašom projekte.</p>
+    
+    <a href="contact.html" class="inline-flex items-center justify-center gap-3 text-[0.8rem] font-medium tracking-[0.15em] uppercase text-white bg-accent px-[2.5rem] py-[1.1rem] transition-all duration-300 hover:bg-ink hover:text-white shadow-[0_8px_30px_rgba(45,92,42,0.2)] hover:shadow-[0_8px_30px_rgba(26,26,24,0.2)] hover:-translate-y-1">
+      Kontaktujte nás
+      <svg viewBox="0 0 16 16" fill="none" class="w-4 h-4 transition-transform group-hover:translate-x-1" stroke="currentColor" stroke-width="1.5">
+        <path d="M3 8h10M9 4l4 4-4 4"/>
+      </svg>
+    </a>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer class="bg-ink text-white pt-20 pb-10 px-6 lg:px-16 border-t-[0.5px] border-white/10">
   <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:[grid-template-columns:2fr_1fr_1fr_1fr] gap-12 lg:gap-8">
@@ -287,7 +325,7 @@
     <!-- Column 1: Brand -->
     <div class="flex flex-col gap-6">
       <div class="flex items-center gap-3">
-        <img src="assets/logo-removebg-preview.png" alt="GeoBukový logo" class="h-10 w-auto brightness-0 invert">
+        <img src="assets/logo-footer.png" alt="GeoBukový logo" class="h-10 w-auto">
         <div class="flex flex-col gap-[1px]">
           <span class="font-serif text-[1.2rem] font-semibold tracking-[0.02em]">GeoBukový</span>
           <span class="text-[0.6rem] font-normal tracking-[0.15em] uppercase text-white/40">Geodetická kancelária</span>
@@ -397,19 +435,33 @@ const obs = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
 
-// Nav scroll transparency
+// 3-State Nav scroll transparency
 const mainNav = document.getElementById('main-nav');
 const heroSection = document.getElementById('hero');
+
 function handleNavScroll() {
-  const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
-  if (window.scrollY + 80 < heroBottom - 60) {
+  if (!mainNav || !heroSection) return;
+  const heroBottom = heroSection.offsetHeight;
+  
+  if (window.scrollY <= 10) {
+    // 1. Root position (top) -> Fully transparent
     mainNav.classList.add('nav-transparent');
-  } else {
+    mainNav.classList.remove('nav-translucent');
+  } else if (window.scrollY < heroBottom - 80) {
+    // 2. Scrolling inside Hero -> Translucent frosted glass
     mainNav.classList.remove('nav-transparent');
+    mainNav.classList.add('nav-translucent');
+  } else {
+    // 3. Scrolled past Hero into content -> Opaque (Frosted Cream)
+    mainNav.classList.remove('nav-transparent');
+    mainNav.classList.remove('nav-translucent');
   }
 }
-window.addEventListener('scroll', handleNavScroll, { passive: true });
-handleNavScroll();
+
+if(mainNav && heroSection) {
+  window.addEventListener('scroll', handleNavScroll, { passive: true });
+  handleNavScroll();
+}
 
 document.querySelector('.btn-submit').addEventListener('click', function() {
   this.textContent = 'Odosielam...';
