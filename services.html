@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GeoBukový – Geodetická kancelária</title>
+<title>Služby – GeoBukový</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
@@ -55,7 +55,7 @@
 <body class="font-sans font-light text-ink bg-cream text-[16px] leading-[1.75] antialiased overflow-x-hidden">
 
 <!-- NAV -->
-<nav id="main-nav" class="fixed inset-x-0 top-0 z-[100] flex items-center px-6 lg:px-16 py-4 lg:py-5 bg-[#f5f3eeeb] backdrop-blur-[12px] border-b-[0.5px] border-line transition-all duration-500 nav-transparent">
+<nav id="main-nav" class="fixed inset-x-0 top-0 z-[100] flex items-center px-6 lg:px-16 py-4 lg:py-5 bg-[#f5f3eeeb] backdrop-blur-[12px] border-b-[0.5px] border-line transition-all duration-500">
   
   <a href="index.html" class="flex flex-1 items-center gap-4 no-underline cursor-pointer group">
     <img src="assets/logo-removebg-preview.png" alt="GeoBukový logo" class="h-10 w-auto">
@@ -93,190 +93,106 @@
   <a href="contact.html" class="mobile-link mt-4 text-[0.85rem] font-medium tracking-[0.1em] uppercase text-white bg-accent px-8 py-4 no-underline active:bg-accent-light">Dopytovať sa</a>
 </div>
 
-<!-- HERO -->
-<section class="h-[750px] lg:h-[850px] max-h-[100dvh] flex items-start px-6 lg:px-16 pb-0 pt-24 lg:pt-36 relative overflow-hidden" id="hero" style="background: url('assets/hero-bg.jpg') center center / cover no-repeat;">
-  <!-- Dark overlay for contrast -->
-  <div class="absolute inset-0 bg-ink/80"></div>
-  <!-- Topo pattern overlay -->
-  <div class="absolute inset-0 opacity-[0.05] hero-topo"></div>
-  <!-- Grid pattern overlay -->
-  <div class="absolute inset-0 hero-grid-pattern"></div>
-  <div class="relative z-10 w-full max-w-[1000px] mx-auto text-center">
-    
-    <div class="inline-flex items-center justify-center gap-4 px-5 py-2 border border-white/10 bg-white/[0.03] backdrop-blur-sm text-white/80 tracking-[0.25em] uppercase text-[0.62rem] sm:text-[0.65rem] mb-12 relative overflow-hidden rounded-sm group fade-up">
-      <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-      <span class="relative flex h-2 w-2">
-        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-light opacity-40"></span>
-        <span class="relative inline-flex rounded-full h-2 w-2 bg-accent-light shadow-[0_0_8px_rgba(74,138,69,0.5)]"></span>
-      </span>
-      <span>Geodetická kancelária <span class="mx-1 text-white/20">/</span> Slovensko</span>
-    </div>
 
-    <h1 class="font-serif text-[clamp(4rem,10vw,8.5rem)] font-light leading-[0.95] text-white tracking-[-0.03em] mb-6">
-      Geo<span class="bg-clip-text text-transparent bg-gradient-to-br from-[#a8c4a5] via-accent-light to-accent">Bukový</span>
-    </h1>
-    
-    <p class="font-serif text-[clamp(1.4rem,3vw,2.2rem)] font-light italic text-white/90 tracking-tight mb-8">
-      Presnosť v každom meraní
-    </p>
-
-    <div class="mb-12 pt-8 border-t-[1.5px] border-accent-light/40 max-w-[500px] mx-auto fade-up" style="transition-delay: 0.1s">
-      <p class="text-[0.72rem] font-medium tracking-[0.28em] uppercase text-white mb-3">Ing. Tomáš Bukový, PhD. &nbsp;·&nbsp; GEO2</p>
-      <p class="text-[1rem] text-white/90 leading-relaxed font-light">Profesionálne geodetické služby s presnosťou a spoľahlivosťou</p>
-    </div>
-
-    <div class="flex flex-wrap gap-6 items-center justify-center fade-up" style="transition-delay: 0.2s">
-      <a href="services.html" class="inline-block text-[0.78rem] font-medium tracking-[0.1em] uppercase text-white bg-accent px-[2.2rem] py-[0.9rem] no-underline transition-colors duration-200 hover:bg-accent-light">Naše služby</a>
-      <a href="contact.html" class="flex items-center gap-2 text-[0.78rem] font-normal tracking-[0.1em] uppercase text-white/60 no-underline transition-colors duration-200 hover:text-white/90">
-        Kontaktujte nás
-        <svg viewBox="0 0 16 16" fill="none" class="w-4 h-4" stroke="currentColor" stroke-width="1.5">
-          <path d="M3 8h10M9 4l4 4-4 4"/>
-        </svg>
-      </a>
-    </div>
+<!-- TOP PADDING -->
+<div class="pt-24 lg:pt-32"></div>
+<!-- SERVICES -->
+<section class="bg-cream py-16 lg:pb-28 lg:pt-16 px-6 lg:px-16" id="services">
+  <div class="flex flex-col lg:flex-row lg:justify-between lg:items-end mb-4 lg:mb-16 gap-4 lg:gap-16 max-w-[1200px] mx-auto fade-up">
+    <h2 class="font-serif text-[clamp(2.2rem,4vw,3.8rem)] font-light leading-[1.15] tracking-[-0.01em] text-ink lg:max-w-[500px]">Čo ponúkame</h2>
+    <p class="text-[0.9rem] text-ink-muted lg:max-w-[320px] leading-[1.7]">Komplexné geodetické služby s dôrazom na presnosť, spoľahlivosť a dodržanie termínov.</p>
   </div>
-  <div class="hidden lg:block absolute right-16 bottom-24 text-[0.65rem] font-normal tracking-[0.15em] text-white/20 text-right leading-[2] font-mono">
-    48°8′38″N 17°6′36″E<br>
-    GEO2 / JTSK S-JTSK<br>
-    ±0.002 m presnosť
-  </div>
-</section>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-[1px] bg-line border-[0.5px] border-line max-w-[1200px] mx-auto fade-up" style="transition-delay:0.1s">
 
-<!-- PROCESS -->
-<section class="bg-ink py-16 lg:py-28 px-6 lg:px-16" id="process">
-  <div class="max-w-[1200px] mx-auto">
-
-    <div class="flex flex-col lg:flex-row lg:justify-between lg:items-end mb-12 lg:mb-20 gap-4 fade-up">
-      <div>
-        <div class="flex items-center gap-[0.8rem] text-[0.68rem] font-medium tracking-[0.25em] uppercase text-accent-light mb-6 before:content-[''] before:block before:w-[28px] before:h-[0.5px] before:bg-accent-light">Ako pracujeme</div>
-        <h2 class="font-serif text-[clamp(2.2rem,4vw,3.8rem)] font-light leading-[1.15] tracking-[-0.01em] text-white">Od dopytu po<br><em class="italic text-[#a8c4a5]">hotový výsledok</em></h2>
-      </div>
-      <p class="text-[0.9rem] text-white/40 lg:max-w-[300px] leading-[1.7]">Jednoduchý, transparentný proces — vždy viete, kde sa váš projekt nachádza.</p>
+    <div class="bg-cream hover:bg-white transition-colors duration-250 py-10 px-8 cursor-default group">
+      <svg class="w-[44px] h-[44px] mb-[1.8rem] text-accent" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.2">
+        <rect x="8" y="8" width="28" height="28" rx="0"/>
+        <line x1="22" y1="2" x2="22" y2="8"/>
+        <line x1="22" y1="36" x2="22" y2="42"/>
+        <line x1="2" y1="22" x2="8" y2="22"/>
+        <line x1="36" y1="22" x2="42" y2="22"/>
+        <circle cx="22" cy="22" r="5"/>
+        <line x1="14" y1="14" x2="18" y2="18"/>
+        <line x1="26" y1="26" x2="30" y2="30"/>
+      </svg>
+      <div class="text-[0.65rem] font-medium tracking-[0.2em] text-ink-muted uppercase mb-[0.8rem]">01</div>
+      <h3 class="font-serif text-[1.45rem] font-normal text-ink leading-[1.25] mb-[0.8rem]">Geodetické zameranie</h3>
+      <p class="text-[0.85rem] text-ink-muted leading-[1.7]">Presné zameranie pozemkov, stavieb a technickej infraštruktúry v súradnicovom systéme JTSK.</p>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[1px] bg-white/5 border-[0.5px] border-white/10 fade-up" style="transition-delay:0.1s">
-
-      <div class="bg-ink hover:bg-[#1f1f1d] transition-colors duration-300 p-8 lg:p-10 group relative">
-        <div class="text-[0.65rem] font-medium tracking-[0.2em] text-white/20 uppercase mb-6">01</div>
-        <svg class="w-10 h-10 mb-6 text-accent-light opacity-70" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.1">
-          <path d="M8 32 L20 8 L32 32"/>
-          <line x1="12" y1="24" x2="28" y2="24"/>
-          <circle cx="20" cy="8" r="2.5"/>
-        </svg>
-        <h3 class="font-serif text-[1.3rem] font-normal text-white leading-[1.2] mb-3">Konzultácia<br>a dopyt</h3>
-        <p class="text-[0.82rem] text-white/40 leading-[1.7]">Kontaktujete nás — telefonicky, emailom alebo cez formulár. Spoločne preberieme rozsah prác a špecifiká projektu.</p>
-        <div class="hidden lg:block absolute -right-[0.5px] top-10 bottom-10 w-[0.5px] bg-white/10"></div>
-      </div>
-
-      <div class="bg-ink hover:bg-[#1f1f1d] transition-colors duration-300 p-8 lg:p-10 group relative">
-        <div class="text-[0.65rem] font-medium tracking-[0.2em] text-white/20 uppercase mb-6">02</div>
-        <svg class="w-10 h-10 mb-6 text-accent-light opacity-70" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.1">
-          <rect x="6" y="6" width="28" height="28" rx="0"/>
-          <circle cx="20" cy="20" r="6"/>
-          <line x1="20" y1="4" x2="20" y2="8"/>
-          <line x1="20" y1="32" x2="20" y2="36"/>
-          <line x1="4" y1="20" x2="8" y2="20"/>
-          <line x1="32" y1="20" x2="36" y2="20"/>
-        </svg>
-        <h3 class="font-serif text-[1.3rem] font-normal text-white leading-[1.2] mb-3">Cenová<br>ponuka</h3>
-        <p class="text-[0.82rem] text-white/40 leading-[1.7]">Do 24 hodín vám pripravíme nezáväznú cenovú ponuku s presným rozsahom prác, termínom a podmienkami.</p>
-        <div class="hidden lg:block absolute -right-[0.5px] top-10 bottom-10 w-[0.5px] bg-white/10"></div>
-      </div>
-
-      <div class="bg-ink hover:bg-[#1f1f1d] transition-colors duration-300 p-8 lg:p-10 group relative">
-        <div class="text-[0.65rem] font-medium tracking-[0.2em] text-white/20 uppercase mb-6">03</div>
-        <svg class="w-10 h-10 mb-6 text-accent-light opacity-70" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.1">
-          <circle cx="20" cy="20" r="14"/>
-          <circle cx="20" cy="20" r="7"/>
-          <circle cx="20" cy="20" r="2" fill="currentColor"/>
-          <line x1="20" y1="4" x2="20" y2="10"/>
-          <line x1="20" y1="30" x2="20" y2="36"/>
-          <line x1="4" y1="20" x2="10" y2="20"/>
-          <line x1="30" y1="20" x2="36" y2="20"/>
-        </svg>
-        <h3 class="font-serif text-[1.3rem] font-normal text-white leading-[1.2] mb-3">Terénne<br>meranie</h3>
-        <p class="text-[0.82rem] text-white/40 leading-[1.7]">Vykonáme presné geodetické meranie priamo na mieste s využitím GNSS, totálnej stanice a ďalšieho vybavenia.</p>
-        <div class="hidden lg:block absolute -right-[0.5px] top-10 bottom-10 w-[0.5px] bg-white/10"></div>
-      </div>
-
-      <div class="bg-ink hover:bg-[#1f1f1d] transition-colors duration-300 p-8 lg:p-10 group">
-        <div class="text-[0.65rem] font-medium tracking-[0.2em] text-white/20 uppercase mb-6">04</div>
-        <svg class="w-10 h-10 mb-6 text-accent-light opacity-70" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.1">
-          <rect x="6" y="4" width="24" height="32" rx="0"/>
-          <line x1="12" y1="12" x2="24" y2="12"/>
-          <line x1="12" y1="18" x2="24" y2="18"/>
-          <line x1="12" y1="24" x2="20" y2="24"/>
-          <path d="M24 26 l6 6"/>
-          <circle cx="30" cy="32" r="3"/>
-        </svg>
-        <h3 class="font-serif text-[1.3rem] font-normal text-white leading-[1.2] mb-3">Odovzdanie<br>výsledkov</h3>
-        <p class="text-[0.82rem] text-white/40 leading-[1.7]">Spracujeme dáta a doručíme kompletné výstupy — geometrické plány, mapy alebo digitálne dáta — v dohodnutom termíne.</p>
-      </div>
-
+    <div class="bg-cream hover:bg-white transition-colors duration-250 py-10 px-8 cursor-default group">
+      <svg class="w-[44px] h-[44px] mb-[1.8rem] text-accent" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.2">
+        <path d="M8 36 L22 10 L36 36 Z"/>
+        <line x1="8" y1="36" x2="36" y2="36"/>
+        <line x1="15" y1="28" x2="29" y2="28"/>
+        <line x1="19" y1="20" x2="25" y2="20"/>
+        <circle cx="22" cy="10" r="2"/>
+      </svg>
+      <div class="text-[0.65rem] font-medium tracking-[0.2em] text-ink-muted uppercase mb-[0.8rem]">02</div>
+      <h3 class="font-serif text-[1.45rem] font-normal text-ink leading-[1.25] mb-[0.8rem]">Katastrálne mapovanie</h3>
+      <p class="text-[0.85rem] text-ink-muted leading-[1.7]">Vytýčenie hraníc pozemkov, geometrické plány, rozdeľovacie plány a aktualizácia katastrálnych máp.</p>
     </div>
-  </div>
-</section>
 
-<!-- STATS -->
-<section class="bg-cream py-16 lg:py-20 px-6 lg:px-16">
-  <div class="max-w-[1200px] mx-auto">
-    <div class="grid grid-cols-2 lg:grid-cols-4 divide-x-[0.5px] divide-line border-[0.5px] border-line">
-
-      <div class="px-8 py-12 fade-up text-left">
-        <div class="text-[0.6rem] font-medium tracking-[0.2em] uppercase text-ink-muted mb-5">01</div>
-        <div class="font-serif text-[4rem] lg:text-[5rem] font-light text-ink leading-none mb-1">15<span class="text-accent text-[2.5rem] lg:text-[3rem]">+</span></div>
-        <div class="text-[0.7rem] font-medium tracking-[0.18em] uppercase text-ink-soft mt-4">Rokov skúseností</div>
-        <div class="text-[0.78rem] text-ink-muted mt-1 leading-snug">Overená prax od roku 2009</div>
-      </div>
-
-      <div class="px-8 py-12 fade-up text-left" style="transition-delay:0.1s">
-        <div class="text-[0.6rem] font-medium tracking-[0.2em] uppercase text-ink-muted mb-5">02</div>
-        <div class="font-serif text-[4rem] lg:text-[5rem] font-light text-ink leading-none mb-1">800<span class="text-accent text-[2.5rem] lg:text-[3rem]">+</span></div>
-        <div class="text-[0.7rem] font-medium tracking-[0.18em] uppercase text-ink-soft mt-4">Dokončených projektov</div>
-        <div class="text-[0.78rem] text-ink-muted mt-1 leading-snug">Pre súkromných aj firemných klientov</div>
-      </div>
-
-      <div class="px-8 py-12 fade-up text-left" style="transition-delay:0.2s">
-        <div class="text-[0.6rem] font-medium tracking-[0.2em] uppercase text-ink-muted mb-5">03</div>
-        <div class="font-serif text-[4rem] lg:text-[5rem] font-light text-ink leading-none mb-1">±2<span class="text-accent text-[2.5rem] lg:text-[3rem]">mm</span></div>
-        <div class="text-[0.7rem] font-medium tracking-[0.18em] uppercase text-ink-soft mt-4">Presnosť merania</div>
-        <div class="text-[0.78rem] text-ink-muted mt-1 leading-snug">Certifikovaná geodetická presnosť</div>
-      </div>
-
-      <div class="px-8 py-12 fade-up text-left" style="transition-delay:0.3s">
-        <div class="text-[0.6rem] font-medium tracking-[0.2em] uppercase text-ink-muted mb-5">04</div>
-        <div class="font-serif text-[4rem] lg:text-[5rem] font-light text-ink leading-none mb-1">100<span class="text-accent text-[2.5rem] lg:text-[3rem]">%</span></div>
-        <div class="text-[0.7rem] font-medium tracking-[0.18em] uppercase text-ink-soft mt-4">Spokojnosť klientov</div>
-        <div class="text-[0.78rem] text-ink-muted mt-1 leading-snug">Odporúčania od každého klienta</div>
-      </div>
-
+    <div class="bg-cream hover:bg-white transition-colors duration-250 py-10 px-8 cursor-default group">
+      <svg class="w-[44px] h-[44px] mb-[1.8rem] text-accent" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.2">
+        <circle cx="22" cy="22" r="16"/>
+        <circle cx="22" cy="22" r="9"/>
+        <circle cx="22" cy="22" r="2.5" fill="currentColor"/>
+        <line x1="22" y1="6" x2="22" y2="13"/>
+        <line x1="22" y1="31" x2="22" y2="38"/>
+        <line x1="6" y1="22" x2="13" y2="22"/>
+        <line x1="31" y1="22" x2="38" y2="22"/>
+      </svg>
+      <div class="text-[0.65rem] font-medium tracking-[0.2em] text-ink-muted uppercase mb-[0.8rem]">03</div>
+      <h3 class="font-serif text-[1.45rem] font-normal text-ink leading-[1.25] mb-[0.8rem]">GNSS / GPS meranie</h3>
+      <p class="text-[0.85rem] text-ink-muted leading-[1.7]">Satelitné meranie s centimetrovou presnosťou pre stavebné projekty a GIS aplikácie.</p>
     </div>
-  </div>
-</section>
 
-<!-- WHY US -->
-<section class="bg-white py-16 lg:py-28 px-6 lg:px-16" id="why">
-  <div class="max-w-[1000px] mx-auto">
-    <div class="flex items-center gap-[0.8rem] text-[0.68rem] font-medium tracking-[0.25em] uppercase text-accent mb-12 before:content-[''] before:block before:w-[28px] before:h-[0.5px] before:bg-accent fade-up">Prečo my</div>
-    <h2 class="font-serif text-[clamp(2.2rem,4vw,3.8rem)] font-light leading-[1.15] tracking-[-0.01em] text-ink fade-up">Váš spoľahlivý partner<br>pre geodéziu</h2>
-  </div>
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-x-24 lg:gap-y-16 max-w-[1000px] mx-auto mt-8 lg:mt-16 fade-up" style="transition-delay:0.1s">
-    <div class="border-t border-accent-pale pt-[1.8rem]">
-      <h3 class="font-serif text-[1.35rem] font-normal text-ink mb-[0.7rem]">Certifikovaná odbornosť</h3>
-      <p class="text-[0.88rem] text-ink-muted leading-[1.75]">Autorizovaný geodet s akademickým titulom PhD. — záruka odbornosti a dodržiavania všetkých noriem SR.</p>
+    <div class="bg-cream hover:bg-white transition-colors duration-250 py-10 px-8 cursor-default group">
+      <svg class="w-[44px] h-[44px] mb-[1.8rem] text-accent" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.2">
+        <rect x="6" y="28" width="32" height="10"/>
+        <line x1="14" y1="28" x2="10" y2="18"/>
+        <line x1="22" y1="28" x2="22" y2="14"/>
+        <line x1="30" y1="28" x2="34" y2="18"/>
+        <rect x="18" y="10" width="8" height="4"/>
+        <line x1="6" y1="38" x2="6" y2="42"/>
+        <line x1="38" y1="38" x2="38" y2="42"/>
+      </svg>
+      <div class="text-[0.65rem] font-medium tracking-[0.2em] text-ink-muted uppercase mb-[0.8rem]">04</div>
+      <h3 class="font-serif text-[1.45rem] font-normal text-ink leading-[1.25] mb-[0.8rem]">Vytýčenie stavieb</h3>
+      <p class="text-[0.85rem] text-ink-muted leading-[1.7]">Presné vytyčovanie základov, osí a konštrukčných prvkov stavieb podľa projektovej dokumentácie.</p>
     </div>
-    <div class="border-t border-accent-pale pt-[1.8rem]">
-      <h3 class="font-serif text-[1.35rem] font-normal text-ink mb-[0.7rem]">Moderné vybavenie</h3>
-      <p class="text-[0.88rem] text-ink-muted leading-[1.75]">Najnovšia totálna stanica, GNSS prijímače a softvér pre spracovanie dát s maximálnou presnosťou.</p>
+
+    <div class="bg-cream hover:bg-white transition-colors duration-250 py-10 px-8 cursor-default group">
+      <svg class="w-[44px] h-[44px] mb-[1.8rem] text-accent" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.2">
+        <path d="M4 38 Q12 20 22 24 Q32 28 40 8"/>
+        <circle cx="12" cy="28" r="2.5"/>
+        <circle cx="22" cy="24" r="2.5"/>
+        <circle cx="32" cy="20" r="2.5"/>
+        <line x1="4" y1="38" x2="40" y2="38"/>
+        <line x1="4" y1="8" x2="4" y2="38"/>
+      </svg>
+      <div class="text-[0.65rem] font-medium tracking-[0.2em] text-ink-muted uppercase mb-[0.8rem]">05</div>
+      <h3 class="font-serif text-[1.45rem] font-normal text-ink leading-[1.25] mb-[0.8rem]">Inžinierska geodézia</h3>
+      <p class="text-[0.85rem] text-ink-muted leading-[1.7]">Monitoring deformácií stavieb, sledovanie posunov a priebežná kontrola počas výstavby.</p>
     </div>
-    <div class="border-t border-accent-pale pt-[1.8rem]">
-      <h3 class="font-serif text-[1.35rem] font-normal text-ink mb-[0.7rem]">Rýchle dodanie</h3>
-      <p class="text-[0.88rem] text-ink-muted leading-[1.75]">Záleží nám na vašom čase. Výsledky dodávame v dohodnutom termíne bez zbytočných prieťahov.</p>
+
+    <div class="bg-cream hover:bg-white transition-colors duration-250 py-10 px-8 cursor-default group">
+      <svg class="w-[44px] h-[44px] mb-[1.8rem] text-accent" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.2">
+        <rect x="8" y="6" width="28" height="36" rx="0"/>
+        <line x1="14" y1="14" x2="30" y2="14"/>
+        <line x1="14" y1="20" x2="30" y2="20"/>
+        <line x1="14" y1="26" x2="24" y2="26"/>
+        <line x1="14" y1="32" x2="26" y2="32"/>
+        <line x1="26" y1="28" x2="36" y2="38"/>
+        <circle cx="36" cy="38" r="4"/>
+        <circle cx="36" cy="38" r="1.5" fill="currentColor"/>
+      </svg>
+      <div class="text-[0.65rem] font-medium tracking-[0.2em] text-ink-muted uppercase mb-[0.8rem]">06</div>
+      <h3 class="font-serif text-[1.45rem] font-normal text-ink leading-[1.25] mb-[0.8rem]">Geometrické plány</h3>
+      <p class="text-[0.85rem] text-ink-muted leading-[1.7]">Vyhotovenie geometrických plánov na vklad do katastra nehnuteľností a kolaudačné konania.</p>
     </div>
-    <div class="border-t border-accent-pale pt-[1.8rem]">
-      <h3 class="font-serif text-[1.35rem] font-normal text-ink mb-[0.7rem]">Individuálny prístup</h3>
-      <p class="text-[0.88rem] text-ink-muted leading-[1.75]">Každý projekt je iný. Navrhujeme riešenia šité na mieru vašim konkrétnym potrebám a podmienkam.</p>
-    </div>
+
   </div>
 </section>
 
@@ -397,19 +313,6 @@ const obs = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
 
-// Nav scroll transparency
-const mainNav = document.getElementById('main-nav');
-const heroSection = document.getElementById('hero');
-function handleNavScroll() {
-  const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
-  if (window.scrollY + 80 < heroBottom - 60) {
-    mainNav.classList.add('nav-transparent');
-  } else {
-    mainNav.classList.remove('nav-transparent');
-  }
-}
-window.addEventListener('scroll', handleNavScroll, { passive: true });
-handleNavScroll();
 
 document.querySelector('.btn-submit').addEventListener('click', function() {
   this.textContent = 'Odosielam...';
